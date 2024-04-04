@@ -1,1 +1,14 @@
 Jeu d'horreur
+
+Labyrinthe
+Dans le noir -> lampe torche
+première personne
+3/4 joueurs
+puzzles {
+- Porte final -> bouttons rouges qui deviennent vert quand ils sont activés -> énigmes pour les debloquer et appuyer dessus
+- Tableau éparpillés dans le labyrinthe -> code (random);
+- Post it éparpillés dans le labyrinthe, collés aux murs -> retenir le code pour un boutton dans une salle;
+}
+Mimiques du monstre {
+- 
+}
