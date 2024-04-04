@@ -10,5 +10,6 @@ puzzles {
 - Post it éparpillés dans le labyrinthe, collés aux murs -> retenir le code pour un boutton dans une salle;
 }
 Mimiques du monstre {
-- 
+- Quand tu te fais chopper une cage spawn a l'endroit ou tu t'es fait choppé -> bloque le passage, après 30secondes tu devient surbrillant (on te voit à travers les murs), pour te libérer -> crocheter un cadenas (une barre qui tourne autour d'un rond, on appuis sur espace pour l'arreter, un partie verte si sur laquelle  on s'arrete passe au prochain rond (3 ronds) sinon le menu se ferme -> recommence)
+- Quand il te voit camera shake + poursuite -> mouvement speed ++ et inf stamina
 }
