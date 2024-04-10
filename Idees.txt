@@ -14,3 +14,5 @@ Mimiques du monstre {
 - Quand il te voit camera shake + poursuite -> mouvement speed ++ et inf stamina
 }
 systeme de vie -> combiens de vies ?
+systeme de spectate
+un lobby
