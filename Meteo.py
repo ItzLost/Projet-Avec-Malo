@@ -1,26 +1,6 @@
 import requests
 from datetime import datetime, timedelta
 
-def degree_to_direction(degree):
-    if degree is None:
-        return "Inconnu"
-    if degree >= 337.5 or degree < 22.5:
-        return "Nord"
-    elif 22.5 <= degree < 67.5:
-        return "Nord-Est"
-    elif 67.5 <= degree < 112.5:
-        return "Est"
-    elif 112.5 <= degree < 157.5:
-        return "Sud-Est"
-    elif 157.5 <= degree < 202.5:
-        return "Sud"
-    elif 202.5 <= degree < 247.5:
-        return "Sud-Ouest"
-    elif 247.5 <= degree < 292.5:
-        return "Ouest"
-    elif 292.5 <= degree < 337.5:
-        return "Nord-Ouest"
-
 def get_weather_forecast(api_key, city, date_str, horaires_disponibles):
     base_url = "http://api.weatherapi.com/v1/forecast.json"
     params = {
@@ -47,7 +27,7 @@ def get_weather_forecast(api_key, city, date_str, horaires_disponibles):
                 print(f"Température : {hour['temp_c']}°C")
                 print(f"Conditions : {hour['condition']['text']}")
                 print(f"Vitesse du vent : {round(hour['wind_kph'] / 1.852, 1)} noeuds")
-                print(f"Direction du vent : {degree_to_direction(hour['wind_degree'])}")
+                print(f"Direction du vent : {hour['wind_dir']}")
 
     else:
         print("Erreur lors de la récupération des données :", response.status_code)
@@ -79,5 +59,4 @@ if __name__ == "__main__":
     print("Horaires disponibles :", horaires_disponibles)
     
     get_weather_forecast(api_key, city, date_str, horaires_disponibles)
-
 
