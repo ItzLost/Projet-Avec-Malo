@@ -1,62 +1,105 @@
 import requests
 from datetime import datetime, timedelta
 
-def get_weather_forecast(api_key, city, date_str, horaires_disponibles):
-    base_url = "http://api.weatherapi.com/v1/forecast.json"
+def getWeatherForecast(apiKey, city, dateStr, availableHours):
+    baseUrl = 'http://api.weatherapi.com/v1/forecast.json'
     params = {
-        'key': api_key,
+        'key': apiKey,
         'q': city,
-        'days': 1,  # Limiter à 1 jour
+        'days': 1,
         'aqi': 'no',
         'alerts': 'no'
     }
 
-    response = requests.get(base_url, params=params)
+    response = requests.get(baseUrl, params=params)
 
     if response.status_code == 200:
         data = response.json()
-        city_name = data['location']['name']
-        print(f"Prévisions météo pour {city_name} le {date_str} :")
-        
-        for hour in data['forecast']['forecastday'][0]['hour']:
-            hour_time = datetime.strptime(hour['time'], "%Y-%m-%d %H:%M")
-            hour_str = hour_time.strftime("%H:%M")  # Format HH:MM
+        cityName = data['location']['name']
+        print(f'Yo, weather forecast for {cityName} on {dateStr}:')
 
-            if hour_str in horaires_disponibles:
-                print(f"\nDate : {hour_time.strftime('%Y-%m-%d %H:%M')}")
-                print(f"Température : {hour['temp_c']}°C")
-                print(f"Conditions : {hour['condition']['text']}")
-                print(f"Vitesse du vent : {round(hour['wind_kph'] / 1.852, 1)} noeuds")
-                print(f"Direction du vent : {hour['wind_dir']}")
+        wingfoilingHours = []
+        nonWingfoilingHours = []
+        totalTemp = 0
+        totalWindSpeed = 0
+        countTemp = 0
+        countWindSpeed = 0
+        windDirections = []
+
+        for hour in data['forecast']['forecastday'][0]['hour']:
+            hourTime = datetime.strptime(hour['time'], '%Y-%m-%d %H:%M')
+            hourStr = hourTime.strftime('%H')
+
+            if hourStr in availableHours:
+                windSpeedKnots = round(hour['wind_kph'] / 1.852, 1)
+                windDirection = hour['wind_dir']
+                temperature = hour['temp_c']
+
+                totalTemp += temperature
+                countTemp += 1
+                totalWindSpeed += windSpeedKnots
+                countWindSpeed += 1
+                windDirections.append(windDirection)
+
+                if windSpeedKnots >= 10 and (windDirection in range(180, 361) or windDirection == 0):
+                    wingfoilingHours.append(hourStr)
+                else:
+                    nonWingfoilingHours.append(hourStr)
+
+        if wingfoilingHours:
+            print(f'You can go wingfoiling from {wingfoilingHours[0]} to {wingfoilingHours[-1]}.')
+        elif len(nonWingfoilingHours) <= 0 and len(availableHours) > 1:
+            print('You can\'t go wingfoiling in the specified range.')
+
+        if len(nonWingfoilingHours) > 1:
+            print(f'You can\'t surf between: {", ".join(nonWingfoilingHours)}.')
+        elif len(nonWingfoilingHours) == 1:
+            print(f'You can\'t surf at: {", ".join(nonWingfoilingHours)}.')
+
+        if countTemp > 0:
+            avgTemp = totalTemp / countTemp
+            print(f'Average air temperature: {avgTemp:.1f}°C.')
+            print(f'Estimated water temperature: {avgTemp - 2:.1f}°C.')
+
+        if countWindSpeed > 0:
+            avgWindSpeed = totalWindSpeed / countWindSpeed
+            print(f'Average wind speed: {avgWindSpeed:.1f} knots.')
+
+        if windDirections:
+            print(f'Wind directions: {", ".join(map(str, windDirections))}°.')
 
     else:
-        print("Erreur lors de la récupération des données :", response.status_code)
+        print('Error retrieving data:', response.status_code)
 
-def demander_horaires():
-    horaires = input("Entrez vos horaires disponibles (ex: 09:00-12:00, 14:00-18:00) : ")
-    horaires_disponibles = []
-    try:
-        for plage in horaires.split(","):
-            start_time, end_time = plage.strip().split("-")
-            start_datetime = datetime.strptime(start_time.strip(), "%H:%M")
-            end_datetime = datetime.strptime(end_time.strip(), "%H:%M")
-            current_time = start_datetime
-            
-            while current_time <= end_datetime:
-                horaires_disponibles.append(current_time.strftime("%H:%M"))  # Format HH:MM
-                current_time += timedelta(hours=1)  # Ajoute chaque heure
-    except ValueError:
-        print("Erreur de format dans les horaires.")
+def askAvailableHours():
+    hours = input('Enter your available hours (like 9-12, 14-18) or just hit Enter to use the current hour: ')
+    availableHours = []
     
-    return horaires_disponibles
-
-if __name__ == "__main__":
-    api_key = "6c49665ad5b343f99b7121258240110"  # Remplacez par votre clé API
-    city = input("Entrez le nom de la ville : ")
-    date_str = input("Entrez la date (format AAAA-MM-JJ) : ")
-
-    horaires_disponibles = demander_horaires()
-    print("Horaires disponibles :", horaires_disponibles)
+    if not hours.strip():
+        now = datetime.now()
+        availableHours.append(now.strftime('%H'))
+        print(f'Using current hour: {now.strftime("%H")}:00')
+    else:
+        try:
+            for rangeStr in hours.split(','):
+                startHour, endHour = map(int, rangeStr.strip().split('-'))
+                for hour in range(startHour, endHour + 1):
+                    availableHours.append(str(hour))
+        except ValueError:
+            print('Error in time format, fam.')
     
-    get_weather_forecast(api_key, city, date_str, horaires_disponibles)
+    return availableHours
 
+if __name__ == '__main__':
+    apiKey = '6c49665ad5b343f99b7121258240110'
+    city = input('Enter the name of the city: ')
+    dateStr = input('Enter the date (YYYY-MM-DD) or just hit Enter for today: ')
+
+    if not dateStr.strip():
+        dateStr = datetime.now().strftime('%Y-%m-%d')
+        print(f'Using today\'s date: {dateStr}')
+
+    availableHours = askAvailableHours()
+    print('Available hours:', availableHours)
+    
+    getWeatherForecast(apiKey, city, dateStr, availableHours)
