@@ -1,7 +1,7 @@
 import requests
-from datetime import datetime, timedelta
+from datetime import datetime
 
-def getWeatherForecast(apiKey, city, dateStr, availableHours):
+def getWeatherForecast(apiKey, city, dateStr, availableHours, lang):
     baseUrl = 'http://api.weatherapi.com/v1/forecast.json'
     params = {
         'key': apiKey,
@@ -16,7 +16,7 @@ def getWeatherForecast(apiKey, city, dateStr, availableHours):
     if response.status_code == 200:
         data = response.json()
         cityName = data['location']['name']
-        print(f'Weather forecast for {cityName} on {dateStr}:')
+        print(lang == 'en' and f'Weather forecast for {cityName} on {dateStr}:' or f'Prévisions météo pour {cityName} le {dateStr}')
 
         wingfoilingHours = []
         nonWingfoilingHours = []
@@ -47,38 +47,38 @@ def getWeatherForecast(apiKey, city, dateStr, availableHours):
                     nonWingfoilingHours.append(hourStr)
 
         if wingfoilingHours:
-            print(f'You can go wingfoiling from {wingfoilingHours[0]} to {wingfoilingHours[-1]}.')
+            print(lang == 'en' and f'You can go wingfoiling from {wingfoilingHours[0]}h to {wingfoilingHours[-1]}h.' or f'Vous pouvez faire du wingfoil de {wingfoilingHours[0]}h à {wingfoilingHours[-1]}h.')
         elif len(nonWingfoilingHours) <= 0 and len(availableHours) > 1:
-            print('You can\'t go wingfoiling in the specified range.')
+            print(lang == 'en' and 'You can\'t go wingfoiling in the specified range.' or f'Vous ne pouvez pas faire de wingfoil dans la plage horraire spécifiée.')
 
         if len(nonWingfoilingHours) > 1:
-            print(f'You can\'t surf between: {", ".join(nonWingfoilingHours)}.')
+            print(lang == 'en' and f'You can\'t surf between: {"h, ".join(nonWingfoilingHours)}h.' or f'Vous ne pouvez pas surfer entre : {"h, ".join(nonWingfoilingHours)}h.')
         elif len(nonWingfoilingHours) == 1:
-            print(f'You can\'t surf at: {", ".join(nonWingfoilingHours)}.')
+            print(lang == 'en' and f'You can\'t surf at: {"h, ".join(nonWingfoilingHours)}h.' or f'Vous ne pouvez pas surfer sur : {"h, ".join(nonWingfoilingHours)}h.')
 
         if countTemp > 0:
             avgTemp = totalTemp / countTemp
-            print(f'Average air temperature: {avgTemp:.1f}°C.')
-            print(f'Estimated water temperature: {avgTemp - 2:.1f}°C.')
+            print(lang == 'en' and f'Average air temperature: {avgTemp:.1f}°C.' or f'Température moyenne de l\'air : {avgTemp:.1f}°C.')
+            print(lang == 'en' and f'Estimated water temperature: {avgTemp - 2:.1f}°C.' or f'')
 
         if countWindSpeed > 0:
             avgWindSpeed = totalWindSpeed / countWindSpeed
-            print(f'Average wind speed: {avgWindSpeed:.1f} knots.')
+            print(lang == 'en' and f'Average wind speed: {avgWindSpeed:.1f} knots.' or f'Vitesse moyenne du vent : {avgWindSpeed:.1f} noeuds.')
 
         if windDirections:
-            print(f'Wind directions: {", ".join(map(str, windDirections))}°.')
+            print(lang == 'en' and f'Wind directions: {"°, ".join(map(str, windDirections))}°.' or f'Directions du vent : {"°, ".join(map(str, windDirections))}°.')
 
     else:
-        print('Error retrieving data:', response.status_code)
+        print(lang == 'en' and 'Error retrieving data:' or 'Erreur lors de la récupération des données:', response.status_code)
 
-def askAvailableHours():
-    hours = input('Enter your available hours (like 9-12, 14-18) or just hit Enter to use the current hour: ')
+def askAvailableHours(lang):
+    hours = input(lang == 'en' and 'Enter your available hours (like 9-12, 14-18) or just hit Enter to use the current hour: ' or f'Entrez vos heures disponibles (comme 9-12, 14-18) ou appuyez simplement sur Entrée pour utiliser l\'heure actuelle :')
     availableHours = []
     
     if not hours.strip():
         now = datetime.now()
         availableHours.append(now.strftime('%H'))
-        print(f'Using current hour: {now.strftime("%H")}:00')
+        print(lang == 'en' and f'Using current hour: {now.strftime("%H")}:00' or f'Utilisation de l\'heure actuelle : {now.strftime("%H")}:00')
     else:
         try:
             for rangeStr in hours.split(','):
@@ -86,21 +86,35 @@ def askAvailableHours():
                 for hour in range(startHour, endHour + 1):
                     availableHours.append(str(hour))
         except ValueError:
-            print('Error in time format.')
+            print(lang == 'en' and 'Error in time format.' or f'Erreur dans le format de l\'heure.')
     
     return availableHours
 
 if __name__ == '__main__':
     apiKey = '6c49665ad5b343f99b7121258240110'
-    city = input('Enter the name of the city: ')
-    dateStr = input('Enter the date (YYYY-MM-DD) or just hit Enter for today: ')
+    language = input('Language wanted (fr-en): ')
+
+    if 'en' in language.lower():
+        language = 'en'
+    elif 'fr' in language.lower():
+        print('Le langage a été changé en Français.')
+        language = 'fr'
+    else:
+        print('Language is not available or not recognized. Using english.')
+        language = 'en'
+
+    city = input(language == 'en' and 'Enter the name of the city: ' or 'Enrtez le nom de la ville: ')
+    dateStr = input(language == 'en' and 'Enter the date (YYYY-MM-DD) or just hit Enter for today: ' or 'Entrez la date (AAAA-MM-JJ) ou appuyez simplement sur Entrée pour aujourd\'hui : ')
+
+    
 
     if not dateStr.strip():
         dateStr = datetime.now().strftime('%Y-%m-%d')
-        print(f'Using today\'s date: {dateStr}')
-
-    availableHours = askAvailableHours()
-    print('Available hours:', availableHours)
+        print(language == 'en' and f'Using today\'s date: {dateStr}' or f'Utilisation de la date d\'aujourd\'hui : {dateStr}')
     
-    getWeatherForecast(apiKey, city, dateStr, availableHours)
+
+    availableHours = askAvailableHours(language)
+    print(language == 'en' and 'Available hours:' or 'Horaires disponibles :', availableHours)
+    
+    getWeatherForecast(apiKey, city, dateStr, availableHours, language)
 
