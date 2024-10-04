@@ -27,3 +27,5 @@ f'Directions du vent : {", ".join(map(str, windDirections))}°.
 'Entrez la date (AAAA-MM-JJ) ou appuyez simplement sur Entrée pour aujourd'hui :'
 
 'Entrez le nom de la ville : '
+
+f'Utilisation de l'heure actuelle : {now.strftime("%H")}:00'
