@@ -1,3 +1,11 @@
-Entrez vos heures disponibles (comme 9-12, 14-18) ou appuyez simplement sur Entrée pour utiliser l\'heure actuelle
+Prévisions météo pour {cityName} sur
 
-Utilisation de l'heure actuelle
+Vous pouvez faire du wingfoil de {wingfoilingHours[0]} à
+
+Vous ne pouvez pas faire de wingfoil dans la plage spécifiée.
+
+Vous ne pouvez pas surfer entre :
+
+Vous ne pouvez pas surfer sur :
+
+Température moyenne de l'air :
