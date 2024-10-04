@@ -16,7 +16,7 @@ def getWeatherForecast(apiKey, city, dateStr, availableHours):
     if response.status_code == 200:
         data = response.json()
         cityName = data['location']['name']
-        print(f'Yo, weather forecast for {cityName} on {dateStr}:')
+        print(f'Weather forecast for {cityName} on {dateStr}:')
 
         wingfoilingHours = []
         nonWingfoilingHours = []
@@ -86,7 +86,7 @@ def askAvailableHours():
                 for hour in range(startHour, endHour + 1):
                     availableHours.append(str(hour))
         except ValueError:
-            print('Error in time format, fam.')
+            print('Error in time format.')
     
     return availableHours
 
@@ -103,3 +103,4 @@ if __name__ == '__main__':
     print('Available hours:', availableHours)
     
     getWeatherForecast(apiKey, city, dateStr, availableHours)
+
