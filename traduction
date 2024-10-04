@@ -25,3 +25,5 @@ f'Directions du vent : {", ".join(map(str, windDirections))}°.
 'Erreur dans le format de l'heure.'
 
 'Entrez la date (AAAA-MM-JJ) ou appuyez simplement sur Entrée pour aujourd'hui :'
+
+'Entrez le nom de la ville : '
