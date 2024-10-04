@@ -22,4 +22,4 @@ f'Directions du vent : {", ".join(map(str, windDirections))}°.
 
 'Entrez vos heures disponibles (comme 9-12, 14-18) ou appuyez simplement sur Entrée pour utiliser l'heure actuelle :'
 
-« Erreur dans le format de l'heure. »
+'Erreur dans le format de l'heure.'
