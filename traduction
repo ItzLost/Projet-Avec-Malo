@@ -19,3 +19,7 @@ f'Vitesse moyenne du vent : {avgWindSpeed:.1f} nœuds.'
 f'Directions du vent : {", ".join(map(str, windDirections))}°.
 
 'Erreur lors de la récupération des données, response.status_code)
+
+'Entrez vos heures disponibles (comme 9-12, 14-18) ou appuyez simplement sur Entrée pour utiliser l'heure actuelle :'
+
+« Erreur dans le format de l'heure. »
