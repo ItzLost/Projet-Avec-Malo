@@ -4,99 +4,99 @@
     {
       "Journee": 1,
       "Matchs": [
-        {"club1": "Arsenal FC", "club2": "Borussia Dortmund", "gagnant": "Arsenal FC", "score": "2-1"},
-        {"club1": "FC Bayern München", "club2": "FC Barcelona", "gagnant": "FC Bayern München", "score": "3-2"},
-        {"club1": "Juventus", "club2": "Paris Saint-Germain", "gagnant": "Paris Saint-Germain", "score": "1-2"},
-        {"club1": "Liverpool FC", "club2": "Real Madrid C.F.", "gagnant": "Real Madrid C.F.", "score": "0-1"},
-        {"club1": "Manchester City", "club2": "Atalanta BC", "gagnant": "Manchester City", "score": "3-0"},
-        {"club1": "FC Internazionale Milano", "club2": "RB Leipzig", "gagnant": "FC Internazionale Milano", "score": "2-1"},
-        {"club1": "SL Benfica", "club2": "AS Monaco", "gagnant": "SL Benfica", "score": "1-0"},
-        {"club1": "Sporting Clube de Portugal", "club2": "FC Salzburg", "gagnant": "Sporting Clube de Portugal", "score": "2-1"},
-        {"club1": "PSV Eindhoven", "club2": "VfB Stuttgart", "gagnant": "PSV Eindhoven", "score": "3-1"}
+        {"club1": "Arsenal FC", "club2": "Borussia Dortmund", "gagnant": "Arsenal FC", "score": [2, 1]},
+        {"club1": "FC Bayern München", "club2": "FC Barcelona", "gagnant": "FC Bayern München", "score": [3, 2]},
+        {"club1": "Juventus", "club2": "Paris Saint-Germain", "gagnant": "Paris Saint-Germain", "score": [1, 2]},
+        {"club1": "Liverpool FC", "club2": "Real Madrid C.F.", "gagnant": "Real Madrid C.F.", "score": [0, 1]},
+        {"club1": "Manchester City", "club2": "Atalanta BC", "gagnant": "Manchester City", "score": [3, 0]},
+        {"club1": "FC Internazionale Milano", "club2": "RB Leipzig", "gagnant": "FC Internazionale Milano", "score": [2, 1]},
+        {"club1": "SL Benfica", "club2": "AS Monaco", "gagnant": "SL Benfica", "score": [1, 0]},
+        {"club1": "Sporting Clube de Portugal", "club2": "FC Salzburg", "gagnant": "Sporting Clube de Portugal", "score": [2, 1]},
+        {"club1": "PSV Eindhoven", "club2": "VfB Stuttgart", "gagnant": "PSV Eindhoven", "score": [3, 1]}
       ]
     },
     {
       "Journee": 2,
       "Matchs": [
-        {"club1": "FC Shakhtar Donetsk", "club2": "BSC Young Boys", "gagnant": "FC Shakhtar Donetsk", "score": "1-0"},
-        {"club1": "SK Sturm Graz", "club2": "Feyenoord", "gagnant": "Feyenoord", "score": "0-2"},
-        {"club1": "Stade Brestois 29", "club2": "Club Brugge KV", "gagnant": "Stade Brestois 29", "score": "3-0"},
-        {"club1": "Aston Villa FC", "club2": "ŠK Slovan Bratislava", "gagnant": "Aston Villa FC", "score": "3-0"},
-        {"club1": "Atlético de Madrid", "club2": "GNK Dinamo", "gagnant": "Atlético de Madrid", "score": "2-1"},
-        {"club1": "LOSC Lille", "club2": "FK Crvena Zvezda", "gagnant": "LOSC Lille", "score": "1-0"},
-        {"club1": "AC Milan", "club2": "Celtic FC", "gagnant": "AC Milan", "score": "2-0"},
-        {"club1": "Bologna FC 1909", "club2": "Girona FC", "gagnant": "nul", "score": "2-2"},
-        {"club1": "AC Sparta Praha", "club2": "Bayer 04 Leverkusen", "gagnant": "Bayer 04 Leverkusen", "score": "0-3"}
+        {"club1": "FC Shakhtar Donetsk", "club2": "BSC Young Boys", "gagnant": "FC Shakhtar Donetsk", "score": [1, 0]},
+        {"club1": "SK Sturm Graz", "club2": "Feyenoord", "gagnant": "Feyenoord", "score": [0, 2]},
+        {"club1": "Stade Brestois 29", "club2": "Club Brugge KV", "gagnant": "Stade Brestois 29", "score": [3, 0]},
+        {"club1": "Aston Villa FC", "club2": "ŠK Slovan Bratislava", "gagnant": "Aston Villa FC", "score": [3, 0]},
+        {"club1": "Atlético de Madrid", "club2": "GNK Dinamo", "gagnant": "Atlético de Madrid", "score": [2, 1]},
+        {"club1": "LOSC Lille", "club2": "FK Crvena Zvezda", "gagnant": "LOSC Lille", "score": [1, 0]},
+        {"club1": "AC Milan", "club2": "Celtic FC", "gagnant": "AC Milan", "score": [2, 0]},
+        {"club1": "Bologna FC 1909", "club2": "Girona FC", "gagnant": "nul", "score": [2, 2]},
+        {"club1": "AC Sparta Praha", "club2": "Bayer 04 Leverkusen", "gagnant": "Bayer 04 Leverkusen", "score": [0, 3]}
       ]
     },
     {
       "Journee": 3,
       "Matchs": [
-        {"club1": "Arsenal FC", "club2": "PSV Eindhoven", "gagnant": "Arsenal FC", "score": "2-1"},
-        {"club1": "Real Madrid C.F.", "club2": "SL Benfica", "gagnant": "Real Madrid C.F.", "score": "3-1"},
-        {"club1": "FC Barcelona", "club2": "Manchester City", "gagnant": "Manchester City", "score": "1-2"},
-        {"club1": "FC Internazionale Milano", "club2": "Paris Saint-Germain", "gagnant": "Paris Saint-Germain", "score": "0-1"},
-        {"club1": "FC Bayern München", "club2": "Atlético de Madrid", "gagnant": "FC Bayern München", "score": "2-0"},
-        {"club1": "Juventus", "club2": "Feyenoord", "gagnant": "Juventus", "score": "1-0"},
-        {"club1": "VfB Stuttgart", "club2": "Borussia Dortmund", "gagnant": "Borussia Dortmund", "score": "1-3"},
-        {"club1": "Liverpool FC", "club2": "Aston Villa FC", "gagnant": "Liverpool FC", "score": "2-1"},
-        {"club1": "Club Brugge KV", "club2": "Sporting Clube de Portugal", "gagnant": "Sporting Clube de Portugal", "score": "0-1"}
+        {"club1": "Arsenal FC", "club2": "PSV Eindhoven", "gagnant": "Arsenal FC", "score": [2, 1]},
+        {"club1": "Real Madrid C.F.", "club2": "SL Benfica", "gagnant": "Real Madrid C.F.", "score": [3, 1]},
+        {"club1": "FC Barcelona", "club2": "Manchester City", "gagnant": "Manchester City", "score": [1, 2]},
+        {"club1": "FC Internazionale Milano", "club2": "Paris Saint-Germain", "gagnant": "Paris Saint-Germain", "score": [0, 1]},
+        {"club1": "FC Bayern München", "club2": "Atlético de Madrid", "gagnant": "FC Bayern München", "score": [2, 0]},
+        {"club1": "Juventus", "club2": "Feyenoord", "gagnant": "Juventus", "score": [1, 0]},
+        {"club1": "VfB Stuttgart", "club2": "Borussia Dortmund", "gagnant": "Borussia Dortmund", "score": [1, 3]},
+        {"club1": "Liverpool FC", "club2": "Aston Villa FC", "gagnant": "Liverpool FC", "score": [2, 1]},
+        {"club1": "Club Brugge KV", "club2": "Sporting Clube de Portugal", "gagnant": "Sporting Clube de Portugal", "score": [0, 1]}
       ]
     },
     {
       "Journee": 4,
       "Matchs": [
-        {"club1": "AS Monaco", "club2": "PSV Eindhoven", "gagnant": "PSV Eindhoven", "score": "0-2"},
-        {"club1": "Feyenoord", "club2": "Stade Brestois 29", "gagnant": "Stade Brestois 29", "score": "1-2"},
-        {"club1": "Girona FC", "club2": "VfB Stuttgart", "gagnant": "Girona FC", "score": "1-0"},
-        {"club1": "FC Shakhtar Donetsk", "club2": "Paris Saint-Germain", "gagnant": "Paris Saint-Germain", "score": "0-1"},
-        {"club1": "Real Madrid C.F.", "club2": "LOSC Lille", "gagnant": "Real Madrid C.F.", "score": "2-1"},
-        {"club1": "FC Bayern München", "club2": "GNK Dinamo", "gagnant": "FC Bayern München", "score": "4-1"},
-        {"club1": "Atalanta BC", "club2": "SL Benfica", "gagnant": "SL Benfica", "score": "0-1"},
-        {"club1": "FC Salzburg", "club2": "ŠK Slovan Bratislava", "gagnant": "FC Salzburg", "score": "2-0"},
-        {"club1": "Arsenal FC", "club2": "BSC Young Boys", "gagnant": "Arsenal FC", "score": "3-0"}
+        {"club1": "AS Monaco", "club2": "PSV Eindhoven", "gagnant": "PSV Eindhoven", "score": [0, 2]},
+        {"club1": "Feyenoord", "club2": "Stade Brestois 29", "gagnant": "Stade Brestois 29", "score": [1, 2]},
+        {"club1": "Girona FC", "club2": "VfB Stuttgart", "gagnant": "Girona FC", "score": [1, 0]},
+        {"club1": "FC Shakhtar Donetsk", "club2": "Paris Saint-Germain", "gagnant": "Paris Saint-Germain", "score": [0, 1]},
+        {"club1": "Real Madrid C.F.", "club2": "LOSC Lille", "gagnant": "Real Madrid C.F.", "score": [2, 1]},
+        {"club1": "FC Bayern München", "club2": "GNK Dinamo", "gagnant": "FC Bayern München", "score": [4, 1]},
+        {"club1": "Atalanta BC", "club2": "SL Benfica", "gagnant": "SL Benfica", "score": [0, 1]},
+        {"club1": "FC Salzburg", "club2": "ŠK Slovan Bratislava", "gagnant": "FC Salzburg", "score": [2, 0]},
+        {"club1": "Arsenal FC", "club2": "BSC Young Boys", "gagnant": "Arsenal FC", "score": [3, 0]}
       ]
     },
     {
       "Journee": 5,
       "Matchs": [
-        {"club1": "AC Milan", "club2": "Bayer 04 Leverkusen", "gagnant": "Bayer 04 Leverkusen", "score": "1-2"},
-        {"club1": "FC Barcelona", "club2": "Sporting Clube de Portugal", "gagnant": "FC Barcelona", "score": "3-1"},
-        {"club1": "Liverpool FC", "club2": "Atlético de Madrid", "gagnant": "Atlético de Madrid", "score": "1-2"},
-        {"club1": "PSV Eindhoven", "club2": "Juventus", "gagnant": "Juventus", "score": "0-1"},
-        {"club1": "Aston Villa FC", "club2": "Feyenoord", "gagnant": "Aston Villa FC", "score": "2-1"},
-        {"club1": "Paris Saint-Germain", "club2": "FC Internazionale Milano", "gagnant": "FC Internazionale Milano", "score": "1-3"},
-        {"club1": "Bologna FC 1909", "club2": "Club Brugge KV", "gagnant": "Club Brugge KV", "score": "1-2"},
-        {"club1": "RB Leipzig", "club2": "FC Shakhtar Donetsk", "gagnant": "RB Leipzig", "score": "2-0"},
-        {"club1": "FK Crvena Zvezda", "club2": "Celtic FC", "gagnant": "Celtic FC", "score": "1-3"}
+        {"club1": "AC Milan", "club2": "Bayer 04 Leverkusen", "gagnant": "Bayer 04 Leverkusen", "score": [1, 2]},
+        {"club1": "FC Barcelona", "club2": "Sporting Clube de Portugal", "gagnant": "FC Barcelona", "score": [3, 1]},
+        {"club1": "Liverpool FC", "club2": "Atlético de Madrid", "gagnant": "Atlético de Madrid", "score": [1, 2]},
+        {"club1": "PSV Eindhoven", "club2": "Juventus", "gagnant": "Juventus", "score": [0, 1]},
+        {"club1": "Aston Villa FC", "club2": "Feyenoord", "gagnant": "Aston Villa FC", "score": [2, 1]},
+        {"club1": "Paris Saint-Germain", "club2": "FC Internazionale Milano", "gagnant": "FC Internazionale Milano", "score": [1, 3]},
+        {"club1": "Bologna FC 1909", "club2": "Club Brugge KV", "gagnant": "Club Brugge KV", "score": [1, 2]},
+        {"club1": "RB Leipzig", "club2": "FC Shakhtar Donetsk", "gagnant": "RB Leipzig", "score": [2, 0]},
+        {"club1": "FK Crvena Zvezda", "club2": "Celtic FC", "gagnant": "Celtic FC", "score": [1, 3]}
       ]
     },
     {
       "Journee": 6,
       "Matchs": [
-        {"club1": "Real Madrid C.F.", "club2": "Manchester City", "gagnant": "Real Madrid C.F.", "score": "3-2"},
-        {"club1": "AS Monaco", "club2": "SK Sturm Graz", "gagnant": "AS Monaco", "score": "1-0"},
-        {"club1": "SL Benfica", "club2": "Borussia Dortmund", "gagnant": "Borussia Dortmund", "score": "1-3"},
-        {"club1": "VfB Stuttgart", "club2": "ŠK Slovan Bratislava", "gagnant": "VfB Stuttgart", "score": "2-1"},
-        {"club1": "BSC Young Boys", "club2": "LOSC Lille", "gagnant": "LOSC Lille", "score": "0-1"},
-        {"club1": "Arsenal FC", "club2": "AC Milan", "gagnant": "Arsenal FC", "score": "2-0"},
-        {"club1": "Feyenoord", "club2": "FC Salzburg", "gagnant": "Feyenoord", "score": "1-0"},
-        {"club1": "Aston Villa FC", "club2": "Girona FC", "gagnant": "Girona FC", "score": "1-2"},
-        {"club1": "FC Barcelona", "club2": "Juventus", "gagnant": "Juventus", "score": "1-3"}
+        {"club1": "Real Madrid C.F.", "club2": "Manchester City", "gagnant": "Real Madrid C.F.", "score": [3, 2]},
+        {"club1": "AS Monaco", "club2": "SK Sturm Graz", "gagnant": "AS Monaco", "score": [1, 0]},
+        {"club1": "SL Benfica", "club2": "Borussia Dortmund", "gagnant": "Borussia Dortmund", "score": [1, 3]},
+        {"club1": "VfB Stuttgart", "club2": "ŠK Slovan Bratislava", "gagnant": "VfB Stuttgart", "score": [2, 1]},
+        {"club1": "BSC Young Boys", "club2": "LOSC Lille", "gagnant": "LOSC Lille", "score": [0, 1]},
+        {"club1": "Arsenal FC", "club2": "AC Milan", "gagnant": "Arsenal FC", "score": [2, 0]},
+        {"club1": "Feyenoord", "club2": "FC Salzburg", "gagnant": "Feyenoord", "score": [1, 0]},
+        {"club1": "Aston Villa FC", "club2": "Girona FC", "gagnant": "Girona FC", "score": [1, 2]},
+        {"club1": "FC Barcelona", "club2": "Juventus", "gagnant": "Juventus", "score": [1, 3]}
       ]
     },
     {
       "Journee": 7,
       "Matchs": [
-        {"club1": "Paris Saint-Germain", "club2": "FC Bayern München", "gagnant": "FC Bayern München", "score": "0-2"},
-        {"club1": "Atlético de Madrid", "club2": "Club Brugge KV", "gagnant": "Atlético de Madrid", "score": "3-1"},
-        {"club1": "Sporting Clube de Portugal", "club2": "Liverpool FC", "gagnant": "Liverpool FC", "score": "1-2"},
-        {"club1": "FC Shakhtar Donetsk", "club2": "AC Sparta Praha", "gagnant": "FC Shakhtar Donetsk", "score": "2-1"},
-        {"club1": "RB Leipzig", "club2": "Bologna FC 1909", "gagnant": "RB Leipzig", "score": "3-0"},
-        {"club1": "FK Crvena Zvezda", "club2": "PSV Eindhoven", "gagnant": "PSV Eindhoven", "score": "1-2"},
-        {"club1": "Real Madrid C.F.", "club2": "FC Internazionale Milano", "gagnant": "Real Madrid C.F.", "score": "2-0"},
-        {"club1": "Arsenal FC", "club2": "Atalanta BC", "gagnant": "Arsenal FC", "score": "3-1"},
-        {"club1": "Stade Brestois 29", "club2": "AC Sparta Praha", "gagnant": "Stade Brestois 29", "score": "2-1"}
+        {"club1": "Paris Saint-Germain", "club2": "FC Bayern München", "gagnant": "FC Bayern München", "score": [0, 2]},
+        {"club1": "Atlético de Madrid", "club2": "Club Brugge KV", "gagnant": "Atlético de Madrid", "score": [3, 1]},
+        {"club1": "Sporting Clube de Portugal", "club2": "Liverpool FC", "gagnant": "Liverpool FC", "score": [1, 2]},
+        {"club1": "FC Shakhtar Donetsk", "club2": "AC Sparta Praha", "gagnant": "FC Shakhtar Donetsk", "score": [2, 1]},
+        {"club1": "RB Leipzig", "club2": "Bologna FC 1909", "gagnant": "RB Leipzig", "score": [3, 0]},
+        {"club1": "FK Crvena Zvezda", "club2": "PSV Eindhoven", "gagnant": "PSV Eindhoven", "score": [1, 2]},
+        {"club1": "Real Madrid C.F.", "club2": "FC Internazionale Milano", "gagnant": "Real Madrid C.F.", "score": [2, 0]},
+        {"club1": "Arsenal FC", "club2": "Atalanta BC", "gagnant": "Arsenal FC", "score": [3, 1]},
+        {"club1": "Stade Brestois 29", "club2": "AC Sparta Praha", "gagnant": "Stade Brestois 29", "score": [2, 1]}
       ]
     }
   ]
